@@ -1,0 +1,184 @@
+    <title>FactforMe</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="main/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="main/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="main/images/favicon-16x16.png">
+    <link rel="manifest" href="main/images/site.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/theme/css/jquery-ui.css">
+    <link rel="stylesheet" href="/theme/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/theme/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/theme/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="/theme/css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="/theme/css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="/theme/fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="/theme/css/aos.css">
+
+    <link rel="stylesheet" href="/main/css/style.css">
+    
+  </head>
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+      
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo mr-auto w-25 link"><a href="/">FactforMe</a></div>
+        </div>
+      </div>
+      
+    </header>
+    </div>
+    
+    <!--main content -->
+    <br>
+    <div class="main">
+        <h1 class="display-6 center">Hey <span class="name"><%= input.name %></span> ! Here's What We Found.</h1>
+        <hr>
+        <h2 class="display-6 center">Your have lived for! 🔥</h2>
+        <br>
+
+        <!-- age col-row harkat -->
+        <% var year = input.date.substring(0,4) %>
+        <% var month = input.date.substring(5,7) %>
+        <% var day = input.date.substring(9,10) %>
+        <% const inputdate = new Date(input.date) %>
+        <% var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']; %>
+        <% var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; %>
+        <div class="row center">
+            <div class="col-lg-4 col-sm-12 column">
+                <h3>Minutes</h3>
+                <p><%= (new Date().getFullYear() - year)*12*30*24*60 %></p>
+            </div>
+            <div class="col-lg-4 col-sm-12 column">
+                <h3>Hours</h3>
+                <p><%= (new Date().getFullYear() - year)*12*30*24 %></p>
+            </div>
+            <div class="col-lg-4 col-sm-12 column">
+                <h3>Days</h3>
+                <p><%= (new Date().getFullYear() - year)*12*30 %></p>
+            </div>
+        </div>
+        <hr>
+        <h2 class="display-6 center">You knew this one? 🤔</h2>
+        <br>
+        <h5 class="display-6"> ➡ You are <%= (new Date().getFullYear()- year) %> years old. Also, you are <%= (new Date().getFullYear() - year)*12*30*24*60*60 %> seconds old.</h3>
+        <hr>
+        <hr>
+        <h2 class="display-6 center">Your Heart! ❤</h2>
+        <br>
+        <h5 class="display-6"> ➡ Your heart has beaten <%= (new Date().getFullYear() - year)*12*30*24*60*72 %> times.</h3>
+        <hr>
+        <h2 class="display-6 center">So, you breath? 🌬️</h2>
+        <br>
+        <h5 class="display-6"> ➡ You have taken <%= (new Date().getFullYear() - year)*12*30*24*60*16 %> breaths. Also, you blinked <%= (new Date().getFullYear() - year)*12*30*24*60*15 %> times.</h3>
+        <hr>
+        <h2 class="display-6 center">You have slept so much! 😴</h2>
+        <br>
+        <h5 class="display-6"> ➡ You have slept for <%= (new Date().getFullYear() - year)*365*8 %> hours. Also you have eaten <%= ((new Date().getFullYear() - year)*365*1.81437).toFixed(2) %> kgs of food.</h3>
+        <hr>
+        <h2 class="display-6 center">What you do? 💼</h2>
+        <br>
+        <% if((new Date().getFullYear()- year) < 5){ %>
+            <h5 class="display-6"> ➡ Why do I feel that you are a cute little baby!</h3>
+        <% } else if ((new Date().getFullYear()- year) < 17) { %>
+            <h5 class="display-6"> ➡ You are probably in <%= (new Date().getFullYear()- year - 5) %>th grade.</h3>
+        <% } else if ((new Date().getFullYear()- year) >= 17 && (new Date().getFullYear()- year) <= 22) { %>
+            <h5 class="display-6"> ➡ You are probably in a college or in 12th grade.</h3>
+        <% } else if ((new Date().getFullYear()- year) >= 22 && (new Date().getFullYear()- year) <= 60) { %>
+            <h5 class="display-6"> ➡ You probably are doing some job or buissness or you're a professional.</h3>        
+        <% } else if ((new Date().getFullYear()- year) >= 60) { %>
+            <h5 class="display-6"> ➡ You have probably retired from your job.</h3>
+        <% } %>
+        <hr>
+        <h2 class="display-6 center">Which generation are you?</h2>
+        <br>
+        <% if(year <= 1945){ %>
+            <h5 class="display-6"> ➡ You are part of the generation traditionals.</h3>
+            <p class="birthdays">Born before 1945, “The Depression Babies.” Influenced by the Great Depression and World War II. Traits: Loyal, respectful of authority, stubbornly independent, excellent work ethic, dependable, and have advanced communication and interpersonal skills.</p>
+        <% } else if(year >= 1946 && year <= 1964) { %>
+            <h5 class="display-6"> ➡ You are part of the Baby Boomers.</h3>
+            <p class="birthdays">Born 1946-1964, “The Woodstock Generation.” Influenced by the Vietnam War, the ’60s, and postwar social change. Traits: Well-educated, question authority, excellent teamwork skills, and thrive on adrenaline-charged assignments.</p>
+        <% } else if(year >= 1965 && year <= 1980) { %>
+            <h5 class="display-6"> ➡ You are part of the Generation X.</h3>
+            <p class="birthdays">Born 1965-1980, “The Latchkey Generation.” Traits: Independent, family-focused, intolerant of bureaucracy, critical, hardworking, and socially responsible.</p>
+        <% } else if(year >= 1981 && year <= 1995) { %>
+            <h5 class="display-6"> ➡ You are part of the Generation Y.</h3>
+            <p class="birthdays">“The Entitled Generation.” Influenced by technology and doting parents. Traits: Highly socialized, loyal, technologically savvy, socially responsible, and require work-life balance.</p>
+        <% } else if(year >= 1995) { %>
+            <h5 class="display-6"> ➡ You are part of the Linksters.</h3>
+            <p class="birthdays">Born after 1995. “The Facebook Crowd.” Influenced by a media-saturated world. Traits: Technologically dependent, closely tied to parents, tolerant of alternative lifestyles, involved in green causes and social activism.</p>
+        <% } %>
+        <hr>
+        <h2 class="display-6 center">When you were born! 👶</h2>
+        <br>
+        <% if(month == 12 || month == 01 || month == 02){ %>
+            <h5 class="display-6"> ➡ When you were born it was winter season. Also, it was a <%= days[inputdate.getDay()] %>.</h3>
+        <% } else if (month == 06 || month == 07 || month == 08) { %>
+            <h5 class="display-6"> ➡ When you were born it was summer season. Also, it was a <%= days[inputdate.getDay()] %>.</h3>
+        <% } else if (month == 03 || month == 04 || month == 05) { %>
+            <h5 class="display-6"> ➡ When you were born it was spring season. Also, it was a <%= days[inputdate.getDay()] %>.</h3>
+        <% } else { %>
+            <h5 class="display-6"> ➡ When you were born it was autumn(fall) season.</h3>
+        <% } %>
+        <hr>
+        <h2 class="display-6 center">Inter-Planetary Age. 🪐</h2>
+        <br>
+        <h5 class="display-6"> ➡ You would be <%= ((new Date().getFullYear() - year)*4.13).toFixed(2) %> years old on Mercury.</h3>
+        <h5 class="display-6"> ➡ You would be <%= ((new Date().getFullYear() - year)*1.62).toFixed(2) %> years old on Venus.</h3>
+        <h5 class="display-6"> ➡ You would be <%= ((new Date().getFullYear() - year)*0.53).toFixed(2) %> years old on Mars.</h3>
+        <h5 class="display-6"> ➡ You would be <%= ((new Date().getFullYear() - year)*0.08).toFixed(2) %> years old on Jupiter.</h3>
+        <h5 class="display-6"> ➡ You would be <%= ((new Date().getFullYear() - year)*0.03).toFixed(2) %> years old on Saturn.</h3>
+        <h5 class="display-6"> ➡ You would be <%= ((new Date().getFullYear() - year)*0.011).toFixed(2) %> years old on Uranus.</h3>
+        <h5 class="display-6"> ➡ You would be <%= ((new Date().getFullYear() - year)*0.006).toFixed(2) %> years old on Neptune.</h3>
+        <hr>
+        <h2 class="display-6 center">Your Next Birthday Is In! 🎂</h2>
+        <br>
+    <% var myBirthday, today, bday, diff, nodays; %>
+    <% myBirthday = [day,month]; // 6th of February %>
+    <% today = new Date(); %>
+    <% bday = new Date(today.getFullYear(),myBirthday[1]-1,myBirthday[0]); %>
+    <% if( today.getTime() > bday.getTime()) { %>
+       <% bday.setFullYear(bday.getFullYear()+1); %>
+    <% } %>
+    <% diff = bday.getTime()-today.getTime(); %>
+    <% nodays = Math.floor(diff/(1000*60*60*24)); %>
+        <h5 class="display-6"> ➡ Your next birthday is in ~ <%= nodays %> days.</h3>
+        <hr>
+        <h2 class="display-6 center">Your future Birthdays! 🎉</h2>
+        <br>
+        <h5 class="display-6"> ➡ In next 5 years your birthday will be on following days: </h3>
+            <br>
+            <% var currentYear = new Date().getFullYear().toString(); %>
+            <% for(var i=0; i< 5; i++){ %>
+                <h5 class="display-6 birthdays"><%= days[new Date(inputdate.toString().substring(4,11) + currentYear).getDay()] %>   - 
+                    <%= currentYear %></h5>
+                <% currentYear++; %>
+            <% } %>
+    </div>
+
+<script>
+    alert(days+" days until Niet's birthday!");
+</script>
+
+    
+<%- include('partials/footer') %>

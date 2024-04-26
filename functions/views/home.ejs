@@ -1,0 +1,94 @@
+<%- include("partials/head") %>
+
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background-image: url('images/hero_1.jpg');" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100">Know facts about you!</h1>
+                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">Your birthday can reveal more than when you were born. Go ahead and find out!</p>
+                </div>
+
+                <div class="col-lg-5 ml-auto center" data-aos="fade-up" data-aos-delay="500">
+                  <form action="/getfacts" method="post" class="form-box">
+                    <h3 class="h4 text-black mb-4">Tell us about you!</h3>
+                    <div class="form-group">
+                      <input name="form[name]" type="text" class="form-control center" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                      <input name="form[date]" type="date" class="form-control center" placeholder="Date of Birth" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="submit" class="btn btn-primary btn-pill" value="Submit">
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="teachers-section">
+      <div class="container mb-4 margin-top">
+        <hr>
+        <div class="row justify-content-center">
+          <div class="col-lg-7 text-center"  data-aos="fade-up" data-aos-delay="">
+            <h2 class="section-title title">What is FactforMe?</h2>
+            <p class="">FactforMe is a website that proves that a date of birth is so much more than just a date. By some simple math calculations it shows, the amount of facts that can be revealed about you by us of some average datas.</p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="teacher text-center">
+              <div class="">
+                <h3 class="text-black">It's cool!</h3>
+                <p>I looked at some websites to find out what we can tell and I was just baffled at how many facts there were.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="teacher text-center">
+              <div class="">
+                <h3 class="text-black">It's accurate!</h3>
+                <p>What we tell on this site is not a joke. Those are actual numbers calculated according to your date of birth.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="teacher text-center">
+              <div class="">
+                <h3 class="text-black">It's about you!</h3>
+                <p>This is the most wonderful part that it's about you. These inteligent guesses and facts sometimes become too true.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+         <hr>
+      </div>
+    </div>
+    
+    <hr>
+    <div class=" pb-0">
+    <div class=" bg-light" id="contact-section">
+      <div class="container">
+
+        <div class="cognito">
+            <script src="https://www.cognitoforms.com/s/gSqTiSE4zki3lEuX0YV2HQ"></script>
+            <script>Cognito.load("forms", { id: "3" });</script>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+<%- include("partials/footer") %>
